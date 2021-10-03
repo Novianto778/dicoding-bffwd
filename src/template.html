@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recipecast</title>
+  </head>
+  <body>
+    <header>
+      <nav-bar></nav-bar>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__wrapper grid grid-cols-2">
+          <div class="hero__content">
+            <h1>Let’s Cooking with Favorite Recipes</h1>
+            <p class="text__body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus voluptatem consectetur mollitia cum optio placeat,
+              reiciendis, provident veniam odio, iure esse nostrum eveniet amet
+              itaque.
+            </p>
+            <a href="./categories.html" class="btn btn--shape btn--accent"
+              >Get Started</a
+            >
+          </div>
+          <div class="hero__image">
+            <img src="./images/hero-image.png" alt="hero image" />
+          </div>
+        </div>
+      </section>
+      <section class="popular container">
+        <h2 class="text__heading">Our Popular Recipe</h2>
+        <div class="popular__wrapper grid grid-cols-3">
+          <div class="recipe__item">
+            <img
+              src="https://www.themealdb.com/images/media/meals/vussxq1511882648.jpg"
+              alt=""
+            />
+            <div class="popular__content">
+              <p class="recipe__name">Pancake</p>
+              <div class="recipe__tags">
+                <p class="recipe__category">Beef</p>
+                <p class="recipe__area">French</p>
+              </div>
+            </div>
+          </div>
+          <div class="recipe__item">
+            <img
+              src="https://www.themealdb.com/images/media/meals/xrysxr1483568462.jpg"
+              alt=""
+            />
+            <div class="popular__content">
+              <p class="recipe__name">Pancake</p>
+              <div class="recipe__tags">
+                <p class="recipe__category">Beef</p>
+                <p class="recipe__area">French</p>
+              </div>
+            </div>
+          </div>
+          <div class="recipe__item">
+            <img
+              src="https://www.themealdb.com/images/media/meals/vussxq1511882648.jpg"
+              alt=""
+            />
+            <div class="popular__content">
+              <p class="recipe__name">Pancake</p>
+              <div class="recipe__tags">
+                <p class="recipe__category">Beef</p>
+                <p class="recipe__area">French</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="recipes container">
+        <h2 class="text__heading">Search Recipes</h2>
+        <form class="input__container">
+          <input type="text" placeholder="Find Your Meal..." />
+          <button type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </form>
+        <div class="recipe__list grid grid-cols-3"></div>
+      </section>
+    </main>
+    <div class="overlay hide">
+      <div class="modal grid grid-cols-2x"></div>
+    </div>
+    <script src="../dist/bundle.js"></script>
+  </body>
+</html>

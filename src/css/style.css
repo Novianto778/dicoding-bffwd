@@ -1,0 +1,287 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f6ba18;
+  --accent: #2f2e41;
+  --body: #404040;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.hero {
+  background-color: var(--primary);
+  height: calc(100vh - 80px);
+}
+
+.hero__wrapper {
+  height: 100%;
+}
+
+.hero__content {
+  /* margin-top: 6rem; */
+  align-self: center;
+}
+
+.hero__content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.text__body {
+  color: var(--body);
+  font-weight: 500;
+}
+
+.text__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn--shape {
+  border-radius: 15px 5px;
+}
+
+.btn--accent {
+  background: var(--accent);
+  color: #fff;
+}
+
+.hero__image {
+  display: none;
+}
+
+.hero__image img {
+  width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Popular */
+.popular {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.recipe__item {
+  overflow: hidden;
+}
+
+.recipe__item img {
+  width: 100%;
+  border-radius: 12px;
+  background-size: cover;
+}
+
+.popular__content {
+  padding: 1rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.recipe__name {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.recipe__tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe__heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.recipe__item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.recipe__item:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(47, 46, 65, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.modal {
+  max-width: 1080px;
+  width: 100%;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow-y: scroll;
+  max-height: 100vh;
+  position: relative;
+}
+
+.modal__img img {
+  width: 100%;
+}
+
+.modal svg {
+  display: block;
+  width: 32px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.grid-cols-2x {
+  grid-template-columns: 1fr;
+}
+/* Recipe */
+.recipes {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.recipe__list {
+  margin-top: 4rem;
+}
+
+.input__container {
+  position: relative;
+}
+
+.input__container button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: var(--primary);
+  background: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.input__container button svg {
+  width: 32px;
+}
+
+input {
+  margin: 0 auto;
+  outline: 0;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary);
+  width: 100%;
+  display: block;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__item:last-child {
+    display: none;
+  }
+
+  .nav__item {
+    display: block;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__image {
+    display: block;
+  }
+
+  .hero {
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cols-2x {
+    grid-template-columns: minmax(auto, 250px) 1fr;
+  }
+
+  .input__container {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  input {
+    width: 600px;
+  }
+}
+
